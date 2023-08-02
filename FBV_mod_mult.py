@@ -1,6 +1,9 @@
+''' (c) 02 Aug. 2023, Fekete Balázs Valér, fbv81bp@[outlook.hu|gmail.com]'''
+
 # My own modulo multiplier algorithm based on number system conversion.
 # Disclaimer: idk, if this exists elsewhere, but it is a simple and
 # clearly hardware friendly algorithm.
+
 def FBV_mod_mult(x,y,m): # A multi-digit might even make use of Kartasuba, idk.
     accu = 0
     to_double = x
