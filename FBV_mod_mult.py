@@ -1,20 +1,22 @@
-''' (c) 02 Aug. 2023, Fekete Balázs Valér, fbv81bp@[outlook.hu|gmail.com] '''
-
 # My own modulo multiplier algorithm based on number system conversion.
 # Disclaimer: idk, if this exists elsewhere, but it is a simple and
-# clearly hardware friendly algorithm.
+# clearly hardware friendly algorithm. Both the comparator and the
+# subtractor work with constant 'm' on one input, and their other input can
+# be used alternately between 'x' and the 'accu'. y>0 can be a
+# fixed length counter in case of known cryptographic applications, so no
+# 3rd comparator is actually needed. While doubling and dividing by 2s is
+# just plain shifting left and right.
 
 def FBV_mod_mult(x,y,m): # A multi-digit might even make use of Kartasuba, idk.
     accu = 0
-    to_double = x
     while y > 0:
-        if to_double > m:
-            to_double -= m
+        if x > m:
+            x -= m
         if y & 1 > 0:
-            accu += to_double
+            accu += x
             if accu > m:
                 accu -= m
-        to_double *= 2
+        x *= 2
         y //= 2
     return accu
 
