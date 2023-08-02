@@ -1,4 +1,4 @@
-''' (c) 02 Aug. 2023, Fekete Balázs Valér, fbv81bp@[outlook.hu|gmail.com]'''
+''' (c) 02 Aug. 2023, Fekete Balázs Valér, fbv81bp@[outlook.hu|gmail.com] '''
 
 # My own modulo multiplier algorithm based on number system conversion.
 # Disclaimer: idk, if this exists elsewhere, but it is a simple and
